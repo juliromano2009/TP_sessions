@@ -1,0 +1,30 @@
+<body>
+    <h2>Registrarse</h2>
+    <form action="/Session/Registrar" method="post">
+        <div >
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div >
+            <label for="nombreUsuario">Nombre de Usuario:</label>
+            <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+        </div>
+        <div class>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password"  id="contraseña" name="contraseña" required>
+        </div>
+        <div class>
+            <label for="apellido">Apellido:</label>
+            <input type="text"  id="apellido" name="apellido" required>
+        </div>
+        <div class=>
+            <label for="tipoUsuario">Tipo de Usuario:</label>
+            <select  id="tipoUsuario" name="tipoUsuario" required>
+                <option value="">Seleccione un tipo</option>
+                <option value="administrador">Administrador</option>
+                <option value="usuario">Usuario</option>
+            </select>
+        </div>
+
+    </form>
+</body>
