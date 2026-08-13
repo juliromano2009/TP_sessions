@@ -40,7 +40,6 @@ public class BD
                 existe = true;
             }
         }
-
         return existe;
     }
 
