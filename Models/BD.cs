@@ -22,21 +22,6 @@ public class BD
             });
         }
     }
-    {
-        using (SqlConnection connection = new SqlConnection(_connectionString))
-        {
-            string query = @"INSERT INTO Usuarios (nombre, nombreUsuario, contraseña, apellido, tipoUsuario)
-                             VALUES (@nombre, @nombreUsuario, @contraseña, @apellido, @tipoUsuario)";
-
-            connection.Execute(query, new
-            {nombre = nombre,
-                nombreUsuario = nombreUsuario,
-                contraseña = contraseña,
-                apellido = apellido,
-                tipoUsuario = tipoUsuario
-            });
-        }
-    }
 
     public bool FijarseSiExisteUsuario(string nombreUsuario)
     {
@@ -56,7 +41,5 @@ public class BD
 
         return existe;
     }
-
-    public 
 
 }
