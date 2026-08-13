@@ -30,6 +30,8 @@ public class BD
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string query = "SELECT COUNT(*) FROM Usuarios WHERE nombreUsuario = @nombreUsuario";
+
+            //esto que sigue me a a devolver un numero que es la cantidad de usuarios con ese nombre de usuario que es la pk
             
             int count = connection.QueryFirstOrDefault<int>(query, new { nombreUsuario = nombreUsuario });
             
@@ -40,6 +42,18 @@ public class BD
         }
 
         return existe;
+    }
+
+    public Usuario ObtenerUsuario(string nombreUsuario, string contraseña)
+    {
+        Usuario usuario = null;
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = "SELECT * FROM Usuarios WHERE nombreUsuario = @nombreUsuario AND contraseña = @contraseña";
+            //esto me va a devolver un objeto de tipo usuario que es el que tiene ese nombre de usuario y esa contraseña tipo para poder llevarlo a la vista y mostrarlo en la pagina de inicio
+            usuario = connection.QueryFirstOrDefault<Usuario>(query, new { nombreUsuario, contraseña }); 
+        }
+        return usuario;
     }
 
 }
