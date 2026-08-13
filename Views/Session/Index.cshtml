@@ -3,9 +3,9 @@
     <form method="post" action = '@Url.Action("IniciarSesion", "Session")'>
     <h1>Iniciar Sesión</h1>
         <br>Nombre de Usuario:<br>
-        <input type="text" placeholder="TuNombre"><br>
+        <input type="text" placeholder="TuNombre" name="nombreUsuario"><br>
         <br>Contraseña:<br>
-        <input type="password" placeholder="********"><br>
+        <input type="password" placeholder="********" name="contraseña"><br>
         <br><input type="submit" value="Iniciar Sesión">
         <br><input type="reset" value="Resetear">
     </form>
