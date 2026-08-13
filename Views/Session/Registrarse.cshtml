@@ -1,30 +1,45 @@
 <body>
     <h2>Registrarse</h2>
-    <form action="/Session/Registrar" method="post">
-        <div >
+    <form id="registroForm" onsubmit="return registrarUsuario(event)">
+        <div>
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej: Albertina Alonso">
+            <p id="fb-nombre" class="feedback"></p>
         </div>
-        <div >
+
+        <div>
             <label for="nombreUsuario">Nombre de Usuario:</label>
-            <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+            <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Ej: albertina123">
+            <p id="fb-nombreUsuario" class="feedback"></p>
         </div>
-        <div class>
-            <label for="contraseña">Contraseña:</label>
-            <input type="password"  id="contraseña" name="contraseña" required>
+
+        <div>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" placeholder="Ingrese una contraseña">
+            <p id="fb-contrasena" class="feedback"></p>
         </div>
-        <div class>
+
+        <div>
             <label for="apellido">Apellido:</label>
-            <input type="text"  id="apellido" name="apellido" required>
+            <input type="text" id="apellido" name="apellido" placeholder="Ej: Alonso">
+            <p id="fb-apellido" class="feedback"></p>
         </div>
-        <div class=>
+
+        <div>
             <label for="tipoUsuario">Tipo de Usuario:</label>
-            <select  id="tipoUsuario" name="tipoUsuario" required>
+            <select id="tipoUsuario" name="tipoUsuario">
                 <option value="">Seleccione un tipo</option>
                 <option value="administrador">Administrador</option>
                 <option value="usuario">Usuario</option>
             </select>
+            <p id="fb-tipoUsuario" class="feedback"></p>
         </div>
 
+        <br>
+        <button type="submit">Enviar</button>
     </form>
+
+    <div id="resultado"></div>
+
+    <script src="/js/registrarse.js"></script>
 </body>
