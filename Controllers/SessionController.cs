@@ -10,4 +10,10 @@ public class SessionController : Controller
     {
         return View();
     }
+    
+    //haceme un iactionresult que me lleve a registrarse.cshtml
+    public IActionResult Registrarse()
+    {
+        return View();
+    }
 }
