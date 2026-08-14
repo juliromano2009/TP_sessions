@@ -21,6 +21,11 @@ public class SessionController : Controller
         return View();
     }
 
+    public IActionResult ValidarUsuario( string nombre, string apellido, string nombreUsuario, string contraseña, string tipoUsuario)
+    {
+        
+    }
+
     //haceme un iactionresult que me permita iniciar sesion, chequee que el usuario exista y que la contraseña sea correcta, si es asi me 
     // lleve a la pagina de inicio, si nom existe el usuario o la contraseña es incorrecta que me devuelva 
     // a la pagina de inicio de sesion con un mensaje de error
