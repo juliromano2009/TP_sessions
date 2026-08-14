@@ -2,12 +2,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSession();
 
 
-builder.Services.AddSession(options =>
-{
-    options.IdleTimeout = TimeSpan.FromMinutes(2);
-});
-
-
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
