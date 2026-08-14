@@ -30,7 +30,7 @@ public class SessionController : Controller
         {
             // El usuario existe y la contraseña es correcta
             // Redirigir a la página de inicio
-            return ("Bienvenida");
+            return RedirectToAction("Bienvenida");
         }
         else
         {
