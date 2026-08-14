@@ -1,6 +1,6 @@
 <body>
     <h2>Registrarse</h2>
-    <form id="registroForm">
+    <form id="registroForm" action= '@Url.Action("ValidarUsuario", "Session")' method="post" onsubmit="return registrarUsuario()">
         <div>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" placeholder="Ej: Albertina Alonso">
@@ -36,7 +36,7 @@
         </div>
 
         <br>
-        <button onclick="registrarUsuario()">Enviar</button>
+        <input type="submit" value="Registrarse">
     </form>
 
     <div id="resultado"></div>

@@ -19,9 +19,10 @@ function registrarUsuario() {
   if (nombre === "") {
     errores.push("El nombre es obligatorio.");
     mostrarError("fb-nombre", "Campo obligatorio");
+    //esto es para que solo se puedan poner letras y espacios en el nombre
   } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(nombre)) {
-    errores.push("El nombre solo puede contener letras.");
-    mostrarError("fb-nombre", "Solo se permiten letras");
+    errores.push("El nombre solo puede contener letras y espacios.");
+    mostrarError("fb-nombre", "Solo se permiten letras y espacios");
   } else {
     mostrarOk("fb-nombre", "✓ OK");
   }
@@ -31,8 +32,8 @@ function registrarUsuario() {
     errores.push("El apellido es obligatorio.");
     mostrarError("fb-apellido", "Campo obligatorio");
   } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(apellido)) {
-    errores.push("El apellido solo puede contener letras.");
-    mostrarError("fb-apellido", "Solo se permiten letras");
+    errores.push("El apellido solo puede contener letras y espacios.");
+    mostrarError("fb-apellido", "Solo se permiten letras y espacios");
   } else {
     mostrarOk("fb-apellido", "✓ OK");
   }
@@ -73,6 +74,7 @@ function registrarUsuario() {
     divResultado.style.padding = "8px";
     divResultado.innerHTML = "<strong>No se pudo registrar:</strong><br>"
                            + errores.join("<br>");
+    return false; // Evita que el formulario se envíe si hay errores
   } else {
     divResultado.style.color = "green";
     divResultado.style.border = "1px solid green";
@@ -83,6 +85,7 @@ function registrarUsuario() {
                            + "Nombre de Usuario: " + nombreUsuario + "<br>"
                            + "Tipo de Usuario: " + tipoUsuario;
     limpiarFormulario();
+    return true; // Permite que el formulario se envíe si no hay errores
   }
 }
 
