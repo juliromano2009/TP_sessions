@@ -1,6 +1,6 @@
 <body>
     <h2>Registrarse</h2>
-    <form id="registroForm" onsubmit="return registrarUsuario(event)">
+    <form id="registroForm">
         <div>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" placeholder="Ej: Albertina Alonso">
@@ -36,7 +36,7 @@
         </div>
 
         <br>
-        <button type="submit">Enviar</button>
+        <button onclick="registrarUsuario()">Enviar</button>
     </form>
 
     <div id="resultado"></div>
