@@ -6,6 +6,8 @@ namespace tp_sessions.Controllers;
 
 public class SessionController : Controller
 {
+    BD bd = new BD();
+
         public IActionResult Index()
     {
         return View();
@@ -23,6 +25,18 @@ public class SessionController : Controller
 
     public IActionResult ValidarUsuario( string nombre, string apellido, string nombreUsuario, string contraseña, string tipoUsuario)
     {
+        bd.FijarseSiExisteUsuario(nombreUsuario);
+        if (bd.FijarseSiExisteUsuario(nombreUsuario))
+        {
+            ViewBag.ErrorMessage = "El nombre de usuario ya existe. Por favor, elija otro.";
+            return View("Registrarse");
+        }
+        else
+        {
+            bd.RegistrarUsuario(nombre, apellido, nombreUsuario, contraseña, tipoUsuario);
+            return RedirectToAction("Index");
+        }
+
         
     }
 
@@ -32,7 +46,6 @@ public class SessionController : Controller
     [HttpPost]
     public IActionResult IniciarSesion(string nombreUsuario, string contraseña)
     {
-        BD bd = new BD();
         Usuario usuario = bd.ObtenerUsuario(nombreUsuario, contraseña);
 
         if (usuario != null)
