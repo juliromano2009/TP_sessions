@@ -30,6 +30,10 @@ public class SessionController : Controller
         {
             // El usuario existe y la contraseña es correcta
             // Redirigir a la página de inicio
+            HttpContext.Session.SetString("NombreUsuario", usuario.NombreUsuario);
+            HttpContext.Session.SetString("TipoUsuario", usuario.TipoUsuario);
+            HttpContext.Session.SetString("Nombre", usuario.Nombre);
+            HttpContext.Session.SetString("Apellido", usuario.Apellido);
             return RedirectToAction("Bienvenida");
         }
         else
