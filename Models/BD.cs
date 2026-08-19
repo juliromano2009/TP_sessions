@@ -8,17 +8,22 @@ public class BD
  
     public void AgregarUsuario(Usuario usuario)
     {
+        string nombre = usuario.Nombre;
+        string nombreUsuario = usuario.NombreUsuario;
+        string contraseña = usuario.Contraseña;
+        string apellido = usuario.Apellido;
+        string tipoUsuario = usuario.TipoUsuario;
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string query = @"INSERT INTO Usuarios (nombre, nombreUsuario, contraseña, apellido, tipoUsuario)
                              VALUES (@nombre, @nombreUsuario, @contraseña, @apellido, @tipoUsuario)";
             connection.Execute(query, new
             {
-                nombre = usuario.Nombre,
-                nombreUsuario = usuario.NombreUsuario,
-                contraseña = usuario.Contraseña,
-                apellido = usuario.Apellido,
-                tipoUsuario = usuario.TipoUsuario
+                nombre = nombre,
+                nombreUsuario = nombreUsuario,
+                contraseña = contraseña,
+                apellido = apellido,
+                tipoUsuario = tipoUsuario
             });
         }
     }
