@@ -33,7 +33,9 @@ public class SessionController : Controller
         }
         else
         {
-            bd.RegistrarUsuario(nombre, apellido, nombreUsuario, contraseña, tipoUsuario);
+            Usuario usuario = new Usuario(nombre, apellido, nombreUsuario, contraseña, tipoUsuario);
+            
+            bd.AgregarUsuario(usuario);
             return RedirectToAction("Index");
         }
 

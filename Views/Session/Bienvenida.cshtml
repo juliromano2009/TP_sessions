@@ -1,2 +1,4 @@
-<h1> Bienvenido, @HttpContext.Session.GetString("Nombre") @HttpContext.Session.GetString("Apellido")</h1>
+@using Microsoft.AspNetCore.Http
+
+<h1> Bienvenido, @Context.Session.GetString("Nombre") @Context.Session.GetString("Apellido")</h1>
 <input type="button" value="Cerrar Sesión" >
