@@ -11,7 +11,7 @@ public class BD
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string query = @"INSERT INTO Usuarios (nombre, nombreUsuario, contraseña, apellido, tipoUsuario)
-                             VALUES usuario.Nombre, usuario.NombreUsuario, usuario.Contraseña, usuario.Apellido, usuario.TipoUsuario)";
+                             VALUES (@nombre, @nombreUsuario, @contraseña, @apellido, @tipo Usuario)";
             connection.Execute(query, new
             {
                 nombre = usuario.Nombre,
