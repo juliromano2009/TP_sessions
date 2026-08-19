@@ -76,15 +76,6 @@ function registrarUsuario() {
                            + errores.join("<br>");
     return false; // Evita que el formulario se envíe si hay errores
   } else {
-    divResultado.style.color = "green";
-    divResultado.style.border = "1px solid green";
-    divResultado.style.padding = "8px";
-    divResultado.innerHTML = "<strong>Usuario registrado exitosamente</strong><br>"
-                           + "Nombre: " + nombre + "<br>"
-                           + "Apellido: " + apellido + "<br>"
-                           + "Nombre de Usuario: " + nombreUsuario + "<br>"
-                           + "Tipo de Usuario: " + tipoUsuario;
-    limpiarFormulario();
     return true; // Permite que el formulario se envíe si no hay errores
   }
 }
