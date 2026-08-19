@@ -3,7 +3,7 @@ using Dapper;
 
 public class BD
 {
-    private static string _connectionString = @"Server=localhost;DataBase=login_tp;Integrated Security=True;TrustServerCertificate=True;";
+    private static string _connectionString = @"Server=localhost;DataBase=tp_login;Integrated Security=True;TrustServerCertificate=True;";
 
  
     public void AgregarUsuario(Usuario usuario)
@@ -11,7 +11,7 @@ public class BD
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string query = @"INSERT INTO Usuarios (nombre, nombreUsuario, contraseña, apellido, tipoUsuario)
-                             VALUES usuario.Nombre, usuario.NombreUsuario, usuario.Contraseña, usuario.Apellido, usuario.TipoUsuario)";
+                             VALUES (@nombre, @nombreUsuario, @contraseña, @apellido, @tipoUsuario)";
             connection.Execute(query, new
             {
                 nombre = usuario.Nombre,
