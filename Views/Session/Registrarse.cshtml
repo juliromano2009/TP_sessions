@@ -3,13 +3,19 @@
     <form id="registroForm" action= '@Url.Action("ValidarUsuario", "Session")' method="post" onsubmit="return registrarUsuario()">
         <div>
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ej: Albertina Alonso">
+            <input type="text" id="nombre" name="nombre" placeholder="Pedro">
             <p id="fb-nombre" class="feedback"></p>
         </div>
 
         <div>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Martinez">
+            <p id="fb-apellido" class="feedback"></p>
+        </div>
+        
+        <div>
             <label for="nombreUsuario">Nombre de Usuario:</label>
-            <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Ej: albertina123">
+            <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Ej: tuUsuario123">
             <p id="fb-nombreUsuario" class="feedback"></p>
         </div>
 
@@ -19,11 +25,7 @@
             <p id="fb-contrasena" class="feedback"></p>
         </div>
 
-        <div>
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" placeholder="Ej: Alonso">
-            <p id="fb-apellido" class="feedback"></p>
-        </div>
+
 
         <div>
             <label for="tipoUsuario">Tipo de Usuario:</label>
