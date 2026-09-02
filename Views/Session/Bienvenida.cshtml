@@ -1,4 +1,7 @@
 @using Microsoft.AspNetCore.Http
 
 <h1> Bienvenido, @Context.Session.GetString("Nombre") @Context.Session.GetString("Apellido")</h1>
-<input type="button" value="Cerrar Sesión" >
+//crear un boton que cierre la sesion y redirija a la pagina de login, no usar window.location.href, usar un form con un boton submit que haga un post a la accion de cerrar sesion
+<form method="post" action='@Url.Action("CerrarSesion", "Session")'>
+    <input type="submit" value="Cerrar Sesión" >
+</form>
