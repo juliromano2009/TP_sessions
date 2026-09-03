@@ -3,8 +3,7 @@ using Dapper;
 
 public class BD
 {
-    private static string _connectionString = @"Server=localhost;DataBase=tp_login;Integrated Security=True;TrustServerCertificate=True;";
-
+    private static string _connectionString = @"Server=.\SQLEXPRESS;DataBase=tp_login;Integrated Security=True;TrustServerCertificate=True;";
  
     public void AgregarUsuario(Usuario usuario)
     {

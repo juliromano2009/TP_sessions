@@ -42,6 +42,12 @@ public class SessionController : Controller
 
         return RedirectToAction(nameof(Bienvenida));
     }
+    [HttpPost]
+    public IActionResult CerrarSesion()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction("Index");
+    }
 
     [HttpPost]
     public IActionResult IniciarSesion(string nombreUsuario, string contraseña)

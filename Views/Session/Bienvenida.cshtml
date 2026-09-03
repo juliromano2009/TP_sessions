@@ -1,4 +1,7 @@
 @using Microsoft.AspNetCore.Http
 
 <h1> Bienvenido, @Context.Session.GetString("Nombre") @Context.Session.GetString("Apellido")</h1>
-<input type="button" value="Cerrar Sesión" >
+<h2>Rol: @Context.Session.GetString("TipoUsuario")</h2>
+<form method="post" action="@Url.Action("CerrarSesion", "Session")">
+	<button type="submit">Cerrar Sesión</button>
+</form>
