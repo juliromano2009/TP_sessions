@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.RegularExpressions;
 using tp_sessions.Models;
 
 namespace tp_sessions.Controllers;
@@ -20,19 +21,39 @@ public class SessionController : Controller
 
     public IActionResult Bienvenida()
     {
-        return View();
+        if (!string.IsNullOrEmpty(HttpContext.Session.GetString("NombreUsuario")))
+        {
+            return View();
+        }
+        else
+        {
+            return RedirectToAction(nameof(Index));
+        }
+    }
+
+    [HttpPost]
+    public IActionResult CerrarSesion()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction(nameof(Index));
     }
 
     [HttpPost]
     public IActionResult ValidarUsuario(string nombre, string apellido, string nombreUsuario, string contraseña, string tipoUsuario)
     {
+        Usuario usuario = new Usuario(nombre, nombreUsuario, contraseña, apellido, tipoUsuario);
+
+        if (!Usuario.ValidarDatosRegistro(usuario.Nombre, usuario.Apellido, usuario.NombreUsuario, usuario.Contraseña, usuario.TipoUsuario))
+        {
+            return View("Registrarse");
+        }
+
         if (bd.FijarseSiExisteUsuario(nombreUsuario))
         {
             ViewBag.ErrorMessage = "El nombre de usuario ya existe. Por favor, elija otro.";
             return View("Registrarse");
         }
 
-        Usuario usuario = new Usuario(nombre, nombreUsuario, contraseña, apellido, tipoUsuario);
         bd.AgregarUsuario(usuario);
 
         HttpContext.Session.SetString("NombreUsuario", usuario.NombreUsuario);

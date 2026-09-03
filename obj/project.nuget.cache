@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "HSpkXNZyVrA=",
   "success": true,
   "projectFilePath": "C:\\Users\\emanuel\\Escritorio\\ORT\\4TO AÑO\\PROGRAMACIÓN\\SESSIONS\\TP_sessions\\tp_sessions.csproj",
+=======
+  "dgSpecHash": "RUjnMqvJjto=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\49628417\\Desktop\\TPSESSIONS\\TP_sessions\\tp_sessions.csproj",
+>>>>>>> ff4f0e2364dd9315404d25c42dcaf2e6b5a8eb4e
   "expectedPackageFiles": [
     "C:\\Users\\emanuel\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\emanuel\\.nuget\\packages\\dapper\\2.1.79\\dapper.2.1.79.nupkg.sha512",
