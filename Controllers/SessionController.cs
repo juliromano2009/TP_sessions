@@ -30,7 +30,7 @@ public class SessionController : Controller
             return RedirectToAction(nameof(Index));
         }
     }
-
+    
     [HttpPost]
     public IActionResult CerrarSesion()
     {
@@ -62,12 +62,6 @@ public class SessionController : Controller
         HttpContext.Session.SetString("Apellido", usuario.Apellido);
 
         return RedirectToAction(nameof(Bienvenida));
-    }
-    [HttpPost]
-    public IActionResult CerrarSesion()
-    {
-        HttpContext.Session.Clear();
-        return RedirectToAction("Index");
     }
 
     [HttpPost]

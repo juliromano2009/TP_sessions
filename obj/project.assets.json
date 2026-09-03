@@ -2035,19 +2035,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\emanuel\\Escritorio\\ORT\\4TO AÑO\\PROGRAMACIÓN\\SESSIONS\\TP_sessions\\tp_sessions.csproj",
       "projectName": "tp_sessions",
       "projectPath": "C:\\Users\\emanuel\\Escritorio\\ORT\\4TO AÑO\\PROGRAMACIÓN\\SESSIONS\\TP_sessions\\tp_sessions.csproj",
       "packagesPath": "C:\\Users\\emanuel\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\emanuel\\Escritorio\\ORT\\4TO AÑO\\PROGRAMACIÓN\\SESSIONS\\TP_sessions\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\49628417\\Desktop\\TPSESSIONS\\TP_sessions\\tp_sessions.csproj",
-      "projectName": "tp_sessions",
-      "projectPath": "C:\\Users\\49628417\\Desktop\\TPSESSIONS\\TP_sessions\\tp_sessions.csproj",
-      "packagesPath": "C:\\Users\\49628417\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\49628417\\Desktop\\TPSESSIONS\\TP_sessions\\obj\\",
->>>>>>> ff4f0e2364dd9315404d25c42dcaf2e6b5a8eb4e
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2145,5 +2137,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\emanuel\\Escritorio\\ORT\\4TO AÑO\\PROGRAMACIÓN\\SESSIONS\\TP_sessions\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+    }
+  ]
 }

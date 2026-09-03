@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "HSpkXNZyVrA=",
   "success": true,
   "projectFilePath": "C:\\Users\\emanuel\\Escritorio\\ORT\\4TO AÑO\\PROGRAMACIÓN\\SESSIONS\\TP_sessions\\tp_sessions.csproj",
-=======
-  "dgSpecHash": "RUjnMqvJjto=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\49628417\\Desktop\\TPSESSIONS\\TP_sessions\\tp_sessions.csproj",
->>>>>>> ff4f0e2364dd9315404d25c42dcaf2e6b5a8eb4e
   "expectedPackageFiles": [
     "C:\\Users\\emanuel\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\emanuel\\.nuget\\packages\\dapper\\2.1.79\\dapper.2.1.79.nupkg.sha512",
@@ -58,5 +52,15 @@
     "C:\\Users\\emanuel\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.19\\microsoft.aspnetcore.app.ref.9.0.19.nupkg.sha512",
     "C:\\Users\\emanuel\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.19\\microsoft.netcore.app.host.win-x64.9.0.19.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problema al leer el archivo de caché C:\\Users\\emanuel\\Escritorio\\ORT\\4TO AÑO\\PROGRAMACIÓN\\SESSIONS\\TP_sessions\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\emanuel\\Escritorio\\ORT\\4TO AÑO\\PROGRAMACIÓN\\SESSIONS\\TP_sessions\\tp_sessions.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\emanuel\\Escritorio\\ORT\\4TO AÑO\\PROGRAMACIÓN\\SESSIONS\\TP_sessions\\tp_sessions.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
